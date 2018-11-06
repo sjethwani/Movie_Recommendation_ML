@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+    movie-killer-app:
+        mem_limit: 2048m 
+        hostname: recommend-app
+        #domainname: block51.net
+        container_name: recommend-app
+        restart: always
+        #image: linuxserver/baseimage
+        build: 
+          context: ./image-src/.
+          dockerfile: Dockerfile
+        #volumes:
+        #    - ./dataholder:/home/vmuser/extData
+        ports:
+            - "5000:5000"
+        #environment:
+        #    - USER=1050
+        networks:
+            - default
+
+networks:
+ default:
+   driver : bridge
+

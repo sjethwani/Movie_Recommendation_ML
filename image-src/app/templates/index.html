@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Movies On Demand</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<!--[if IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+</head>
+<body>
+  <!-- START PAGE SOURCE -->
+  <div id="shell">
+    <div id="header">
+      <h1 id="logo"><a href="#">Movies On Demand</a>
+  </h1>
+      <div class="social"> <span>FOLLOW US ON:</span>
+        <ul>
+          <li><a class="twitter" href="#">twitter</a></li>
+          <li><a class="facebook" href="#">facebook</a></li>
+          <li><a class="vimeo" href="#">vimeo</a></li>
+          <li><a class="rss" href="#">rss</a></li>
+        </ul>
+      </div>
+      <div id="navigation">
+        <ul>
+          <li><a class="active" href="#">HOME</a></li>
+          <li><a href="/dataset" target="_blank">Overview</a></li>
+        </ul>
+      </div>
+      <div id="sub-navigation">
+        <ul>
+          <li><a href="https://www.themoviedb.org/discover/movie" target="_blank">DISCOVER</a></li>
+          <li><a href="https://www.themoviedb.org/movie/top-rated" target="_blank">TOP RATED</a></li>
+          <li><a href="https://www.themoviedb.org/movie" target="_blank">MOST POPULAR</a></li>
+          <li><a href="https://www.themoviedb.org/movie/now-playing" target="_blank">IN THEATERS</a></li>
+          <li><a href="https://www.themoviedb.org/movie/upcoming" target="_blank">COMING SOON</a></li>
+        </ul>
+        <div id="search">
+          <form id="userid" action="#" method="get" accept-charset="utf-8">
+            <label for="search-field">USER</label>
+            <div class="custom-select" style="width:200px;">
+            <select id="selDataApp" onchange="optionChanged(this.value)">
+              <option value="2">Alex</option>
+              <option value="1">Steve</option>
+              <option value="3">Matt</option>
+              <option value="4">Mark</option>
+              <option value="5">Laura</option>
+              <option value="6">Debbie</option>
+              <option value="7">Diana</option>
+              <option value="8">Sue</option>
+            </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="content">
+        <div class="box">
+          <div class="head">
+            <h1>movies watched by you</h1>
+            <p class="text-right"><a id= "watchapi" href="#" target="_blank">See all</a></p>
+          </div>
+          <div class="movie">
+            <div class="movie-image"><span class="play" style="display: none;"><span class="name"></span></span><a id="watch0" href="" target="_blank"><img id="watchimg0" src="" alt=""></a></div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+               </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="watch1" href="#" target="_blank"><img id="watchimg1" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+               </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="watch2" href="#" target="_blank"><img id="watchimg2" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+               </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="watch3" href="#" target="_blank"><img id="watchimg3" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+               </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="watch4" href="#" target="_blank"><img id="watchimg4" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+               </div>
+          </div>
+          <div class="movie last">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="watch5" href="#" target="_blank"><img id="watchimg5" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+               </div>
+          </div>
+          <div class="cl">&nbsp;</div>
+        </div>
+        <div class="box">
+          <div class="head">
+            <h1>movies recommended for you</h1>
+            <p class="text-right"><a id="refreshapi" "href="#" onclick="recommendAgain();return false;">Refresh</a></p>
+            <p class="text-right"><a id="recommendapi" "href="#" target="_blank">See all</a></p>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="recommend0" href="#" target="_blank"><img id="recommendimg0" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+              </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="recommend1" href="#" target="_blank"><img id="recommendimg1" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+              </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="recommend2" href="#" target="_blank"><img id="recommendimg2" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+              </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="recommend3" href="#" target="_blank"><img id="recommendimg3" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+              </div>
+          </div>
+          <div class="movie">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="recommend4" href="#" target="_blank"><img id="recommendimg4" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+              </div>
+          </div>
+          <div class="movie last">
+            <div class="movie-image"> <span class="play" style="display: none;"><span class="name"></span></span> <a id="recommend5" href="#" target="_blank"><img id="recommendimg5" src="" alt=""></a> </div>
+            <div class="rating">
+              <p>RATING</p>
+              <div class="stars">
+                <div class="stars-in"> </div>
+              </div>
+              </div>
+          </div>
+          <div class="cl">&nbsp;</div>
+        </div>
+        
+      </div>
+      
+      
+      <div class="cl">&nbsp;</div>
+    </div>
+    <div id="footer">
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+  <!-- END PAGE SOURCE -->
+  <script type="text/javascript" src="{{ url_for('static', filename='/js/jquery-1.4.2.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='/js/jquery-func.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='/js/app.js') }}"></script>
+  </body>
+</html>

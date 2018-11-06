@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css" media="screen">
+
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-9 phone-nav">
+              <a class="navbar-brand" href="assets/visualizations/temp.html" id="logo">DataSet</a>
+            </div>
+          </div>
+
+        
+
+    <!-- Start of container -->
+    <div class="container">
+      <section class="row">
+        <div class="col-md-10">
+          <article class="description-content">
+            <h1 class="description-header">DataSet Preparation</h1>
+
+            <hr class="description-hr"/>
+            <p>(Original Data from MovieLens)</p>
+            <img src="/css/images/input.png" alt="" class="img-responsive"/>
+          
+            <p>This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9742 movies. These data were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018.</p>
+            <p>The data are contained in the files links.csv, movies.csv, ratings.csv and tags.csv.</p>
+
+            <article class="description-content">
+             <h1 class="description-header">Factorization Machines is the ML algorithm</h1>
+             <hr class="description-hr"/>
+             <p>(Data after trained through machine learning)</p>
+             <img src="/css/images/image.png" alt="" class="img-responsive"/>
+             <p>Recommendation is one of the most popular applications in machine learning (ML). we build a movie recommendation model based on factorization machines</p>
+             <p>Factorization machines can be used for classification or regression and are much more computationally efficient on large sparse data sets than traditional algorithms like linear regression. This property is why FM are widely used for recommendation. User count and item count are typically very large although the actual number of recommendations is very small (users don’t rate all available items!)</p>
+                
+            <article class="description-content">
+            <h1 class="description-header">Ratings Data File Structure (ratings.csv)</h1>
+            <hr class="description-hr"/>
+            <p>All ratings are contained in the file ratings.csv. Each line of this file after the header row represents one rating of one movie by one user, and has the following format:
+            <p>UserId,MovieId,Rating,Timestamp</p>
+            <p>The lines within this file are ordered first by userId, then, within user, by movieId.</p>
+            <p>Tags are made on a 5-star scale, with half-star increments (0.5 stars - 5.0 stars).</p>
+            <p>Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.</p>
+         </article>
+        </div>
+        <div class="col-md-10">
+
+          
+    <!-- End of container -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
